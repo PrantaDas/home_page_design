@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(5,0,136,0.5),rgba(5,0,136,0.5)), url(../images/back.png);
+    /* background-color: ; */
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    transition: background 1s;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+nav .logo img{
+    width: 6opx;
+    margin-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 10px;
+    color: white;
+}
+nav:hover{
+    background: white;
+}
+nav:hover .logo{
+    color: #333;
+}
+nav:hover ul li a{
+    color: #333;
+}
+.banner{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.banner h1{
+    font-size: 120px;
+    line-height: 140px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.banner p{
+    color: #fff;
+    font-size: 25px;
+    max-width: 700px;
+    line-height: 30px;
+    opacity: 0;
+}
+.links{
+    margin-top: 40px;
+    opacity: 0;
+}
+.links a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+.btn1{
+    border: 2px solid white;
+    padding: 10px 40px;
+    border-radius: 35px;
+    margin-right: 25px;
+}
+.slider{
+    animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+
+}
+/* h1.slider{
+    animation-delay: 3s;
+} */
+p.slider{
+    animation-delay: 1s;
+}
+.links.slider{
+    animation-delay: 2s;
+}
