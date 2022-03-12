@@ -32,6 +32,12 @@ nav .logo img{
     width: 6opx;
     margin-right: 10px;
 }
+.logo p{
+    transition: 0.5s;
+}
+.logo p:hover{
+    color: #009688;
+}
 nav ul li{
     display: inline-block;
     list-style: none;
