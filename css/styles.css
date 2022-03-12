@@ -36,13 +36,27 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    position: relative;
 }
 nav ul li a{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
-    padding: 10px 10px;
+    padding: 10px 0;
     color: white;
+}
+nav ul li ::after{
+    content: '';
+    height: 5px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li:hover ::after{
+    width: 100%;
 }
 nav:hover{
     background: white;
@@ -76,15 +90,38 @@ nav:hover ul li a{
     opacity: 0;
 }
 .links a{
+    text-transform: uppercase;
     text-decoration: none;
     color: #fff;
     display: inline-block;
 }
 .btn1{
-    border: 2px solid white;
-    padding: 10px 40px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid #009688;
+    padding: 20px 40px;
     border-radius: 35px;
     margin-right: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 35px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.btn1:hover span{
+    width: 100%;
+}
+.btn1:hover{
+    border: none;
 }
 .slider{
     animation: slideleft 1s linear forwards;
